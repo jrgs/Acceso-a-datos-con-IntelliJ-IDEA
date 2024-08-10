@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://192.168.224.125:5432/Empleados</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <mapping class="com.jrgs.unidad5.empleados.modelo.entidades.EntidadDepartamentos"/>
+    <mapping class="com.jrgs.unidad5.empleados.modelo.entidades.EntidadEmpleados"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

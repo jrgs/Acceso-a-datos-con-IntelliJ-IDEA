@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="180.0" prefWidth="266.0" style="-fx-background-color: #a5eaec;" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.javafx.HelloController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="14.0" prefHeight="40.0" prefWidth="246.0" text="Bienvenido" textAlignment="CENTER" textFill="#62a3a6" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutY="38.0" prefHeight="99.0" prefWidth="266.0" style="-fx-background-color: #62a3a6;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="88.33333333333333" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.00000762939453" minWidth="10.0" prefWidth="178.33333333333337" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="44.66666666666666" minHeight="10.0" prefHeight="33.00000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="16.0" minHeight="3.3333333333333286" prefHeight="13.666666666666671" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Usuario:" textFill="#a5eaec">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Contraseña:" textFill="#a5eaec" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtUser" style="-fx-background-radius: 10px;" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPassword" style="-fx-background-radius: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="errorLabel" alignment="CENTER" prefHeight="13.0" prefWidth="267.0" text="ErrorLabel" textFill="#dc304c" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI" size="10.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" top="3.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="btnLogIn" alignment="CENTER" layoutX="84.0" layoutY="149.0" onMouseClicked="#onBtnLoginClick" prefHeight="33.0" prefWidth="103.0" style="-fx-background-color: #62a3a6; -fx-background-radius: 10px;" styleClass="btnLabel" text="Entrar" textFill="#a5eaec" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>

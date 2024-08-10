@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://192.168.224.125:5432/BibliotecaV2</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">postgres</property>
+    <!-- <mapping class="org.example.EntidadLibros"/>
+    <mapping class="org.example.EntidadUsuarios"/>
+    <mapping class="org.example.ClaseLibrosMN"/>
+    <mapping class="org.example.ClasePrestamos"/>
+    <mapping class="org.example.ClaseUsuarios"/>  -->
+    <mapping class="org.example.ClaseLibrosv2"/>
+    <mapping class="org.example.ClasePrestamosv2"/>
+    <mapping class="org.example.ClaseUsuariosv2"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

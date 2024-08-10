@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Departamentos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Lista de Departamentos</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Número de Departamento</th>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="departamento : ${departamentos}">
+            <td th:text="${departamento.depno}"></td>
+            <td th:text="${departamento.nombre}"></td>
+            <td th:text="${departamento.ubicacion}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <a href="/" class="button">Volver a la página de inicio</a>
+    </div>
+</div>
+</body>
+</html>

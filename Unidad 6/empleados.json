@@ -1,0 +1,14 @@
+{"empno":7369,"nombre":"GARCIA","puesto":"DEPENDIENTE","departamento":{"deptno":20,"nombre":"MARKETING","ubicacion":"BARCELONA"}}
+{"empno":7499,"nombre":"LOPEZ","puesto":"VENDEDOR","departamento":{"deptno":30,"nombre":"VENTAS","ubicacion":"ALICANTE"}}
+{"empno":7521,"nombre":"PEREZ","puesto":"VENDEDOR","departamento":{"deptno":30,"nombre":"VENTAS","ubicacion":"ALICANTE"}}
+{"empno":7566,"nombre":"GOMEZ","puesto":"RESPONSABLE","departamento":{"deptno":20,"nombre":"MARKETING","ubicacion":"BARCELONA"}}
+{"empno":7654,"nombre":"VAZQUEZ","puesto":"VENDEDOR","departamento":{"deptno":30,"nombre":"VENTAS","ubicacion":"ALICANTE"}}
+{"empno":7698,"nombre":"MARTINEZ","puesto":"RESPONSABLE","departamento":{"deptno":30,"nombre":"VENTAS","ubicacion":"ALICANTE"}}
+{"empno":7782,"nombre":"SANCHEZ","puesto":"RESPONSABLE","departamento":{"deptno":10,"nombre":"CONTABILIDAD","ubicacion":"MADRID"}}
+{"empno":7788,"nombre":"JIMENEZ","puesto":"ANALISTA","departamento":{"deptno":20,"nombre":"MARKETING","ubicacion":"BARCELONA"}}
+{"empno":7839,"nombre":"PELAEZ","puesto":"PRESIDENTE","departamento":{"deptno":10,"nombre":"CONTABILIDAD","ubicacion":"MADRID"}}
+{"empno":7844,"nombre":"ALVAREZ","puesto":"VENDEDOR","departamento":{"deptno":30,"nombre":"VENTAS","ubicacion":"ALICANTE"}}
+{"empno":7876,"nombre":"RODRIGUEZ","puesto":"DEPENDIENTE","departamento":{"deptno":20,"nombre":"MARKETING","ubicacion":"BARCELONA"}}
+{"empno":7900,"nombre":"RAMIREZ","puesto":"DEPENDIENTE","departamento":{"deptno":30,"nombre":"VENTAS","ubicacion":"ALICANTE"}}
+{"empno":7902,"nombre":"GONZALEZ","puesto":"ANALISTA","departamento":{"deptno":20,"nombre":"MARKETING","ubicacion":"BARCELONA"}}
+{"empno":7934,"nombre":"HERNANDEZ","puesto":"DEPENDIENTE","departamento":{"deptno":10,"nombre":"CONTABILIDAD","ubicacion":"MADRID"}}

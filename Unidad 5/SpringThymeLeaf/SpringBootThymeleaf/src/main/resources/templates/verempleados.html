@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Lista de Empleados</h1>
+    <select id="selectDepartamento" onchange="cambiarDepartamento()">
+        <option value="">Selecciona un departamento</option>
+        <option th:each="departamento : ${departamentos}"
+                th:value="${departamento.depno}"
+                th:text="${departamento.nombre}">
+        </option>
+    </select>
+    <table>
+        <thead>
+        <tr>
+            <th>Número de Empleado</th>
+            <th>Nombre</th>
+            <th></th>
+            <!--
+            <th>Puesto</th>
+            <th>Número de Departamento</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="empleado : ${empleados}">
+            <td th:text="${empleado.empno}"></td>
+            <td th:text="${empleado.nombre}"></td>
+            <td><a th:href="${'/verempleado?id='+empleado.empno}">Detalles</a></td>
+            <!--<td th:text="${empleado.puesto}"></td>
+            <td th:text="${empleado.depno}"></td>-->
+        </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <a href="/" class="button">Volver a la página de inicio</a>
+    </div>
+</div>
+<script>
+    function cambiarDepartamento() {
+        var depno = document.getElementById("selectDepartamento").value;
+        window.location.href = "/verempleados?depno=" + depno;
+    }
+</script>
+</body>
+</html>

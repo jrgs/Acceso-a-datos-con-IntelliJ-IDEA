@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.ClaseDepartamentos" table="departamentos" schema="public" catalog="Empleados">
+        <id name="depno">
+            <column name="depno" sql-type="integer"/>
+        </id>
+        <property name="nombre">
+            <column name="nombre" sql-type="varchar(14)" length="14" not-null="true"/>
+        </property>
+        <property name="ubicacion">
+            <column name="ubicacion" sql-type="varchar(13)" length="13" not-null="true"/>
+        </property>
+        <set name="listaEmpleados" inverse="true">
+            <key>
+                <column name="depno" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="org.example.ClaseEmpleados"/>
+        </set>
+    </class>
+</hibernate-mapping>
