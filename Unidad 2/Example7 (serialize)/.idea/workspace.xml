@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eec72b8a-879d-4776-b39b-ce302cada4ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/src/main/java/com/jrgs2021/aad/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/src/main/java/com/jrgs2021/aad/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/src/test/java/com/jrgs2021/aad/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/src/test/java/com/jrgs2021/aad/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/surefire-reports/TEST-com.jrgs2021.aad.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/surefire-reports/TEST-com.jrgs2021.aad.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Annex-Maven/target/surefire-reports/com.jrgs2021.aad.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Annex-Maven/target/surefire-reports/com.jrgs2021.aad.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/src/main/java/com/jrgs/aad/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/src/main/java/com/jrgs/aad/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Example1-JDBC/src/test/java/com/jrgs/aad/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit-3/Example1-JDBC/src/test/java/com/jrgs/aad/AppTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1yDCwE3Qgl9F576sHqVzOQQjpAs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Activities2.3" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\jrgarcia\IdeaProjects\DataAccess\Unit-2" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eec72b8a-879d-4776-b39b-ce302cada4ea" name="Default Changelist" comment="" />
+      <created>1631777007735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631777007735</updated>
+      <workItem from="1631777009679" duration="16000" />
+      <workItem from="1631777319426" duration="82000" />
+      <workItem from="1632759513722" duration="195000" />
+      <workItem from="1632841180973" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+</project>

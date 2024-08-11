@@ -1,0 +1,32 @@
+<contactos>
+    <contacto id='c001'>
+        <nombre>José</nombre>
+        <apellido>García</apellido>
+        <correos>
+            <trabajo>jrgarcia@iesmarenostrum.com</trabajo>
+        </correos>
+        <telefonos>
+            <movil>616116611</movil>
+        </telefonos>
+    </contacto>
+    <contacto id='c002'>
+        <nombre>Antonio</nombre>
+        <apellido>Luque</apellido>
+        <correos>
+            <personal>micorreo@protonmail.com</personal>
+            <trabajo>antonio@iesmarenostrum.com</trabajo>
+        </correos>
+        <telefonos>
+            <movil>626226622</movil>
+            <casa>965223344</casa>
+        </telefonos>
+    </contacto>
+    <contacto id='c003'>
+        <nombre>Ana</nombre>
+        <apellido>Pérez</apellido>
+        <telefonos>
+            <casa>616116611</casa>
+            <trabajo>965119192</trabajo>
+        </telefonos>
+    </contacto>
+</contactos>

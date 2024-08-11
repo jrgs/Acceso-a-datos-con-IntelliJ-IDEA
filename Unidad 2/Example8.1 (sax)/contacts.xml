@@ -1,0 +1,32 @@
+<contactlist>
+	<contact id="c001">
+		<name>Jose</name>
+		<surname>García</surname>
+		<emails>
+			<work>jrgarcia@iesmarenostrum.com</work>
+		</emails>
+		<phones>
+			<cell>616116611</cell>
+		</phones>
+	</contact>
+	<contact id="c002">
+		<name>Antonio</name>
+		<surname>Luque</surname>
+		<emails>
+			<home>mymail@protonmail.com</home>
+			<work>antonio@iesmarenostrum.com</work>
+		</emails>
+		<phones>
+			<cell>626226622</cell>
+			<home>965223344</home>
+		</phones>
+	</contact>
+	<contact id="c003">
+		<name>Ana</name>
+		<surname>Pérez</surname>
+		<phones>
+			<cell>616116611</cell>
+			<work>965119192</work>
+		</phones>
+	</contact>
+</contactlist>
