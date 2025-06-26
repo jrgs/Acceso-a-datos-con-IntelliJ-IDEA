@@ -1,0 +1,182 @@
+openapi: "3.0.0"
+info:
+  title: "SpringBoot API"
+  description: "SpringBoot API"
+  version: "1.0.0"
+servers:
+  - url: "https://SpringBoot"
+paths:
+  /api-rest/empleados/{id}:
+    put:
+      summary: "PUT api-rest/empleados/{id}"
+      operationId: "actualizarEmpleado"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int32"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EntidadEmpleados"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+    delete:
+      summary: "DELETE api-rest/empleados/{id}"
+      operationId: "borrarEmpleado"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int32"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+    get:
+      summary: "GET api-rest/empleados/{id}"
+      operationId: "buscarEmpleadoPorId"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "integer"
+            format: "int32"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/EntidadEmpleados"
+  /api-rest/empleados:
+    post:
+      summary: "POST api-rest/empleados"
+      operationId: "guardarEmpleado"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EntidadEmpleados"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "object"
+    get:
+      summary: "GET api-rest/empleados"
+      operationId: "buscarEmpleados"
+      parameters:
+        - name: "puesto"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/EntidadEmpleados"
+  /api-rest/departamentos:
+    get:
+      summary: "GET api-rest/departamentos"
+      operationId: "buscarDepartamentos"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/EntidadDepartamentos"
+  /api-rest/departamentos/prueba/{value}:
+    get:
+      summary: "GET api-rest/departamentos/prueba/{value}"
+      operationId: "buscarDepartamentoMayorQue"
+      parameters:
+        - name: "value"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/EntidadDepartamentos"
+  /api-rest/departamentos/prueba/{value1}/{value2}:
+    get:
+      summary: "GET api-rest/departamentos/prueba/{value1}/{value2}"
+      operationId: "buscarDepartamentoUbicacion"
+      parameters:
+        - name: "value1"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+        - name: "value2"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "array"
+                items:
+                  $ref: "#/components/schemas/EntidadDepartamentos"
+components:
+  schemas:
+    EntidadEmpleados:
+      type: "object"
+      properties:
+        empno:
+          type: "integer"
+          format: "int32"
+        nombre:
+          type: "string"
+        puesto:
+          type: "string"
+        depno:
+          type: "integer"
+          format: "int32"
+    EntidadDepartamentos:
+      type: "object"
+      properties:
+        depno:
+          type: "integer"
+          format: "int32"
+        nombre:
+          type: "string"
+        ubicacion:
+          type: "string"

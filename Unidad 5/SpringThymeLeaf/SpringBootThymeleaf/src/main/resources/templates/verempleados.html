@@ -9,6 +9,7 @@
 <body>
 <div class="container">
     <h1>Lista de Empleados</h1>
+    <p class="ok_message" style="padding: 10px" th:text="${nombredepartamento}"></p>
     <select id="selectDepartamento" onchange="cambiarDepartamento()">
         <option value="">Selecciona un departamento</option>
         <option th:each="departamento : ${departamentos}"

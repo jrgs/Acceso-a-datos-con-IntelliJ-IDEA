@@ -5,13 +5,10 @@ import org.example.springbootthymeleaf.modelo.entidades.EntidadEmpleados;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import org.example.springbootthymeleaf.modelo.dao.IDepartamentosDAO;
 import org.example.springbootthymeleaf.modelo.entidades.EntidadDepartamentos;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,30 +21,38 @@ public class ViewController {
     @Autowired
     IEmpleadosDAO empleadosDAO;
 
-    @GetMapping("/")
+    @GetMapping({"/", "/index", "/index.html", "/index.htm"})
     public String index() {
         return "index";
     }
 
-    @GetMapping("/verdepartamentos")
+    @GetMapping({"/verdepartamentos", "/verdepartamentos.html"})
     public String mostrarDepartamentos(Model model) {
         List<EntidadDepartamentos> departamentos = (List<EntidadDepartamentos>) departamentosDAO.findAll();
         model.addAttribute("departamentos", departamentos);
+        model.addAttribute("nombredepartamento", "Todos");
         return "verdepartamentos";
     }
 
     @GetMapping("/verempleados")
     public String mostrarEmpleados(Model model, @RequestParam(name = "depno", required = false) Integer depno) {
         List<EntidadDepartamentos> departamentos = (List<EntidadDepartamentos>) departamentosDAO.findAll();
- //       departamentos.add(new EntidadDepartamentos(0, "Todos", "Todas"));
- //       departamentos.sort(Comparator.comparing(EntidadDepartamentos::getDepno));
+        //       departamentos.add(new EntidadDepartamentos(0, "Todos", "Todas"));
+        //       departamentos.sort(Comparator.comparing(EntidadDepartamentos::getDepno));
         model.addAttribute("departamentos", departamentos);
         List<EntidadEmpleados> empleados;
-        if (depno == null)//|| depno == 0)
+        if (depno == null)  { //|| depno == 0)
             empleados = (List<EntidadEmpleados>) empleadosDAO.findAll();
-        else
+            model.addAttribute("nombredepartamento", "Todos");
+        }
+        else {
             empleados = (List<EntidadEmpleados>) empleadosDAO.findByDepno(depno);
-        model.addAttribute("empleados", empleados);
+            Optional<EntidadDepartamentos> departamento = departamentosDAO.findById(depno);
+            model.addAttribute("nombredepartamento", departamento.get().getNombre());
+        }
+
+
+            model.addAttribute("empleados", empleados);
         return "verempleados";
     }
 
