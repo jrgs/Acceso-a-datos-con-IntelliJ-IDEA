@@ -6,14 +6,14 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "prestamos", schema = "public", catalog = "Biblioteca")
+@Table(name = "prestamos")
 @Where(clause = "fechaprestamo is null")
-public class ClasePrestamos {
+public class Prestamos {
     private int id;
     private Date fechaprestamo;
     private Date fechadevolucion;
-    private ClaseLibrosMN libro;
-    private ClaseUsuarios usuario;
+    private Libros libro;
+    private Usuarios usuario;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -50,7 +50,7 @@ public class ClasePrestamos {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ClasePrestamos that = (ClasePrestamos) o;
+        Prestamos that = (Prestamos) o;
 
         if (id != that.id) return false;
         if (fechaprestamo != null ? !fechaprestamo.equals(that.fechaprestamo) : that.fechaprestamo != null)
@@ -71,21 +71,21 @@ public class ClasePrestamos {
 
     @ManyToOne
     @JoinColumn(name = "libro", referencedColumnName = "isbn", nullable = false)
-    public ClaseLibrosMN getLibro() {
+    public Libros getLibro() {
         return libro;
     }
 
-    public void setLibro(ClaseLibrosMN libro) {
+    public void setLibro(Libros libro) {
         this.libro = libro;
     }
 
     @ManyToOne
     @JoinColumn(name = "usuario", referencedColumnName = "codigo", nullable = false)
-    public ClaseUsuarios getUsuario() {
+    public Usuarios getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(ClaseUsuarios usuario) {
+    public void setUsuario(Usuarios usuario) {
         this.usuario = usuario;
     }
 }

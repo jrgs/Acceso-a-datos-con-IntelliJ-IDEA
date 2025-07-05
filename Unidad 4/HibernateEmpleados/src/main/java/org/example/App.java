@@ -55,15 +55,15 @@ public class App
     }
 
     private static void ListEmployeesInDepartment(Session session, String department) {
-        Query<EntidadEmpleados> myQuery = session.createQuery("" +
-                "from EntidadEmpleados e join fetch e.departamento d where d.nombre like  :paramDepartment");
+        Query<Empleado> myQuery = session.createQuery("" +
+                "from Empleado e join fetch e.departamento d where d.nombre like  :paramDepartment");
         myQuery.setParameter("paramDepartment", department);
 
-        List<EntidadEmpleados> empleados = myQuery.list();
+        List<Empleado> empleados = myQuery.list();
 
         System.out.println(department+":");
         for ( Object employeeObject : empleados ) {
-            EntidadEmpleados empleado = (EntidadEmpleados) employeeObject;
+            Empleado empleado = (Empleado) employeeObject;
             System.out.printf("\tNúmero : %d  Nombre: %s\n", empleado.getEmpno(), empleado.getNombre());
         }
 

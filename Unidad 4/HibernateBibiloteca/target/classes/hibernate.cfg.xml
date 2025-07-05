@@ -9,14 +9,14 @@
     <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
     <property name="connection.username">postgres</property>
     <property name="connection.password">postgres</property>
-    <!-- <mapping class="org.example.EntidadLibros"/>
-    <mapping class="org.example.EntidadUsuarios"/>
+    <!-- <mapping class="org.example.Libros"/>
+    <mapping class="org.example.Usuarios"/>
     <mapping class="org.example.ClaseLibrosMN"/>
-    <mapping class="org.example.ClasePrestamos"/>
+    <mapping class="org.example.Prestamos"/>
     <mapping class="org.example.ClaseUsuarios"/>  -->
-    <mapping class="org.example.ClaseLibrosv2"/>
-    <mapping class="org.example.ClasePrestamosv2"/>
-    <mapping class="org.example.ClaseUsuariosv2"/>
+    <mapping class="org.example.Librosv2"/>
+    <mapping class="org.example.Prestamosv2"/>
+    <mapping class="org.example.Usuariosv2"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

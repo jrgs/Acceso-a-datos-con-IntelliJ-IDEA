@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link EntidadEmpleados} entity
+ * A DTO for the {@link Empleado} entity
  */
 public class EntidadEmpleadosDto implements Serializable {
     private int empno;

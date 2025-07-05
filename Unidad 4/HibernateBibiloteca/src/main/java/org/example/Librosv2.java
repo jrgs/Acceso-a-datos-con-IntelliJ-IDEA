@@ -8,12 +8,12 @@ import java.util.List;
 @Entity
 @Table(name = "libros", schema = "public", catalog = "BibliotecaV2")
 @Where(clause = "returning date is null")
-public class ClaseLibrosv2 {
+public class Librosv2 {
     private String isbn;
     private String titulo;
     private Integer copias;
     private String editorial;
-    private List<ClasePrestamosv2> prestadoA;
+    private List<Prestamosv2> prestadoA;
 
     @Id
     @Column(name = "isbn", nullable = false, length = 13)
@@ -60,7 +60,7 @@ public class ClaseLibrosv2 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ClaseLibrosv2 that = (ClaseLibrosv2) o;
+        Librosv2 that = (Librosv2) o;
 
         if (isbn != null ? !isbn.equals(that.isbn) : that.isbn != null) return false;
         if (titulo != null ? !titulo.equals(that.titulo) : that.titulo != null) return false;
@@ -80,11 +80,11 @@ public class ClaseLibrosv2 {
     }
 
     @OneToMany(mappedBy = "libroPrestado", fetch = FetchType.EAGER)
-    public List<ClasePrestamosv2> getPrestadoA() {
+    public List<Prestamosv2> getPrestadoA() {
         return prestadoA;
     }
 
-    public void setPrestadoA(List<ClasePrestamosv2> prestadoA) {
+    public void setPrestadoA(List<Prestamosv2> prestadoA) {
         this.prestadoA = prestadoA;
     }
 }

@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-public class ClasePrestamosv2PK implements Serializable {
+public class Prestamosv2PK implements Serializable {
     private String libro;
     private String usuario;
 
@@ -33,7 +33,7 @@ public class ClasePrestamosv2PK implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ClasePrestamosv2PK that = (ClasePrestamosv2PK) o;
+        Prestamosv2PK that = (Prestamosv2PK) o;
 
         if (libro != null ? !libro.equals(that.libro) : that.libro != null) return false;
         if (usuario != null ? !usuario.equals(that.usuario) : that.usuario != null) return false;

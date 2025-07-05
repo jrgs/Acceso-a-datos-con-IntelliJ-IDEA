@@ -8,15 +8,15 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "libros", schema = "public", catalog = "Biblioteca")
+@Table(name = "libros")
 @FilterDef(name = "filtroDeSede", parameters = @ParamDef(name = "numeroDeSede", type = "integer"))
 @Filter(name = "filtroDeSede", condition = "sede_id = :numeroDeSede")
-public class EntidadLibros {
+public class Libros {
     private String isbn;
     private String titulo;
     private Integer copias;
     private String editorial;
-    private List<EntidadUsuarios> prestadoA;
+    private List<Usuarios> prestadoA;
 
     @Id
     @Column(name = "isbn", nullable = false, length = 13)
@@ -63,7 +63,7 @@ public class EntidadLibros {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        EntidadLibros that = (EntidadLibros) o;
+        Libros that = (Libros) o;
 
         if (isbn != null ? !isbn.equals(that.isbn) : that.isbn != null) return false;
         if (titulo != null ? !titulo.equals(that.titulo) : that.titulo != null) return false;
@@ -85,13 +85,12 @@ public class EntidadLibros {
     @ManyToMany
     @JoinTable(name = "prestamos", catalog = "Biblioteca", schema = "public",
             joinColumns = @JoinColumn(name = "libro", referencedColumnName = "isbn", nullable = false),
-            inverseJoinColumns = @JoinColumn(name = "usuario",
-                    referencedColumnName = "codigo", nullable = false))
-    public List<EntidadUsuarios> getPrestadoA() {
+            inverseJoinColumns = @JoinColumn(name = "usuario", referencedColumnName = "codigo", nullable = false))
+    public List<Usuarios> getPrestadoA() {
         return prestadoA;
     }
 
-    public void setPrestadoA(List<EntidadUsuarios> prestadoA) {
+    public void setPrestadoA(List<Usuarios> prestadoA) {
         this.prestadoA = prestadoA;
     }
 }

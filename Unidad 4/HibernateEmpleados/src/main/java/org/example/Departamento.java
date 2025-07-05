@@ -5,11 +5,11 @@ import java.util.List;
 
 @Entity
 @Table(name = "departamentos", schema = "public", catalog = "Empleados")
-public class EntidadDepartamentos {
+public class Departamento {
     private int depno;
     private String nombre;
     private String ubicacion;
-    private List<EntidadEmpleados> listaEmpleados;
+    private List<Empleado> listaEmpleados;
 
     @Id
     @Column(name = "depno", nullable = false)
@@ -46,7 +46,7 @@ public class EntidadDepartamentos {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        EntidadDepartamentos that = (EntidadDepartamentos) o;
+        Departamento that = (Departamento) o;
 
         if (depno != that.depno) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
@@ -64,11 +64,11 @@ public class EntidadDepartamentos {
     }
 
     @OneToMany(mappedBy = "departamento")
-    public List<EntidadEmpleados> getListaEmpleados() {
+    public List<Empleado> getListaEmpleados() {
         return listaEmpleados;
     }
 
-    public void setListaEmpleados(List<EntidadEmpleados> listaEmpleados) {
+    public void setListaEmpleados(List<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
     }
 }

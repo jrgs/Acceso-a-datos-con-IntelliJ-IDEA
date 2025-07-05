@@ -1,17 +1,19 @@
 package org.example;
 
+import org.hibernate.annotations.Where;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "usuarios", schema = "public", catalog = "BibliotecaV2")
-public class ClaseUsuariosv2 {
+@Table(name = "usuarios")
+public class Usuariosv2 {
     private String codigo;
     private String nombre;
     private String apellidos;
     private Date fechanacimiento;
-    private List<ClasePrestamosv2> librosEnPrestamo;
+    private List<Prestamosv2> librosEnPrestamo;
 
     @Id
     @Column(name = "codigo", nullable = false, length = 8)
@@ -58,7 +60,7 @@ public class ClaseUsuariosv2 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ClaseUsuariosv2 that = (ClaseUsuariosv2) o;
+        Usuariosv2 that = (Usuariosv2) o;
 
         if (codigo != null ? !codigo.equals(that.codigo) : that.codigo != null) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
@@ -79,11 +81,12 @@ public class ClaseUsuariosv2 {
     }
 
     @OneToMany(mappedBy = "prestatario")
-    public List<ClasePrestamosv2> getLibrosEnPrestamo() {
+    @Where(clause = "fechadevolucion is null")
+    public List<Prestamosv2> getLibrosEnPrestamo() {
         return librosEnPrestamo;
     }
 
-    public void setLibrosEnPrestamo(List<ClasePrestamosv2> librosEnPrestamo) {
+    public void setLibrosEnPrestamo(List<Prestamosv2> librosEnPrestamo) {
         this.librosEnPrestamo = librosEnPrestamo;
     }
 }

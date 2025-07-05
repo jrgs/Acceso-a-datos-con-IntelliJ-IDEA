@@ -5,13 +5,13 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "usuarios", schema = "public", catalog = "Biblioteca")
-public class EntidadUsuarios {
+@Table(name = "usuarios")
+public class Usuarios {
     private String codigo;
     private String nombre;
     private String apellidos;
     private Date fechanacimiento;
-    private List<EntidadLibros> librosEnPrestamo;
+    private List<Libros> librosEnPrestamo;
 
     @Id
     @Column(name = "codigo", nullable = false, length = 8)
@@ -58,7 +58,7 @@ public class EntidadUsuarios {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        EntidadUsuarios that = (EntidadUsuarios) o;
+        Usuarios that = (Usuarios) o;
 
         if (codigo != null ? !codigo.equals(that.codigo) : that.codigo != null) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
@@ -79,11 +79,11 @@ public class EntidadUsuarios {
     }
 
     @ManyToMany(mappedBy = "prestadoA")
-    public List<EntidadLibros> getLibrosEnPrestamo() {
+    public List<Libros> getLibrosEnPrestamo() {
         return librosEnPrestamo;
     }
 
-    public void setLibrosEnPrestamo(List<EntidadLibros> librosEnPrestamo) {
+    public void setLibrosEnPrestamo(List<Libros> librosEnPrestamo) {
         this.librosEnPrestamo = librosEnPrestamo;
     }
 }

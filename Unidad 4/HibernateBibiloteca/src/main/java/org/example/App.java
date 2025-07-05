@@ -30,11 +30,11 @@ public class App {
     }
 
     private static void mostrarPrestamos(Session session) {
-        Query<ClasePrestamosv2> miQuery = session.createQuery("from ClasePrestamosv2");
-        List<ClasePrestamosv2> prestamos = miQuery.list();
+        Query<Prestamosv2> miQuery = session.createQuery("from ClasePrestamosv2");
+        List<Prestamosv2> prestamos = miQuery.list();
 
         for (Object obj : prestamos) {
-            ClasePrestamosv2 prestamo = (ClasePrestamosv2) obj;
+            Prestamosv2 prestamo = (Prestamosv2) obj;
             System.out.printf("Libro : %s  Usuario: %s\n", prestamo.getLibroPrestado().getTitulo(), prestamo.getPrestatario().getNombre());
         }
     }

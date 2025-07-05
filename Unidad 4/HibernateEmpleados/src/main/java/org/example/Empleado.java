@@ -3,12 +3,12 @@ package org.example;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "empleados", schema = "public", catalog = "Empleados")
-public class EntidadEmpleados {
+@Table(name = "empleados")
+public class Empleado {
     private int empno;
     private String nombre;
     private String puesto;
-    private EntidadDepartamentos departamento;
+    private Departamento departamento;
 
     @Id
     @Column(name = "empno", nullable = false)
@@ -45,7 +45,7 @@ public class EntidadEmpleados {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        EntidadEmpleados that = (EntidadEmpleados) o;
+        Empleado that = (Empleado) o;
 
         if (empno != that.empno) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
@@ -64,11 +64,11 @@ public class EntidadEmpleados {
 
     @ManyToOne
     @JoinColumn(name = "depno", referencedColumnName = "depno")
-    public EntidadDepartamentos getDepartamento() {
+    public Departamento getDepartamento() {
         return departamento;
     }
 
-    public void setDepartamento(EntidadDepartamentos departamento) {
+    public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
 }

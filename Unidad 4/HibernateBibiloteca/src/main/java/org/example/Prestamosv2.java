@@ -4,15 +4,15 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "prestamos", schema = "public", catalog = "BibliotecaV2")
-@IdClass(ClasePrestamosv2PK.class)
-public class ClasePrestamosv2 {
+@Table(name = "prestamos")
+@IdClass(Prestamosv2PK.class)
+public class Prestamosv2 {
     private Date fechaprestamo;
     private Date fechadevolucion;
     private String libro;
     private String usuario;
-    private ClaseLibrosv2 libroPrestado;
-    private ClaseUsuariosv2 prestatario;
+    private Librosv2 libroPrestado;
+    private Usuariosv2 prestatario;
 
     @Basic
     @Column(name = "fechaprestamo", nullable = false)
@@ -59,7 +59,7 @@ public class ClasePrestamosv2 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ClasePrestamosv2 that = (ClasePrestamosv2) o;
+        Prestamosv2 that = (Prestamosv2) o;
 
         if (fechaprestamo != null ? !fechaprestamo.equals(that.fechaprestamo) : that.fechaprestamo != null)
             return false;
@@ -83,21 +83,21 @@ public class ClasePrestamosv2 {
     @ManyToOne
     @JoinColumn(name = "libro", referencedColumnName = "isbn", nullable = false,
                 insertable = false, updatable = false)
-    public ClaseLibrosv2 getLibroPrestado() {
+    public Librosv2 getLibroPrestado() {
         return libroPrestado;
     }
 
-    public void setLibroPrestado(ClaseLibrosv2 libroPrestado) {
+    public void setLibroPrestado(Librosv2 libroPrestado) {
         this.libroPrestado = libroPrestado;
     }
 
     @ManyToOne
     @JoinColumn(name = "usuario", referencedColumnName = "codigo", nullable = false, insertable = false, updatable = false)
-    public ClaseUsuariosv2 getPrestatario() {
+    public Usuariosv2 getPrestatario() {
         return prestatario;
     }
 
-    public void setPrestatario(ClaseUsuariosv2 prestatario) {
+    public void setPrestatario(Usuariosv2 prestatario) {
         this.prestatario = prestatario;
     }
 }
